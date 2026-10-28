@@ -1,0 +1,1006 @@
+/*
+  Halaman layanan (jasa bangun rumah).
+  Memakai variabel dan komponen dari style.css, dengan palet yang sama
+  seperti index utama: navy, krem, dan biru muda, bergantian antar section.
+*/
+
+:root {
+  --cream: #f3f0e9;
+  --sand: #eae7df;
+  --ink: #092344;
+  --ink-soft: #2a4259;
+  --royal: #164c83;
+  --blue-deep: #073c65;
+  --card-line: #d6d1c4;
+}
+
+/* ---------- Dasar section ---------- */
+.lp-sec {
+  padding: 68px 7% 76px;
+}
+.lp-sec-tight {
+  padding-top: 56px;
+  padding-bottom: 60px;
+}
+.lp-cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+.lp-sand {
+  background-color: var(--sand);
+  background-image: linear-gradient(rgba(9, 35, 68, 0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 35, 68, 0.075) 1px, transparent 1px);
+  background-size: 90px 90px;
+  color: var(--ink);
+}
+.lp-navy {
+  background-color: var(--navy);
+  background-image: linear-gradient(rgba(133, 185, 220, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(133, 185, 220, 0.09) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text);
+}
+.lp-blue {
+  background-color: var(--blue-deep);
+  background-image: linear-gradient(rgba(105, 190, 235, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 190, 235, 0.09) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text);
+}
+
+.lp-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.lp-label span {
+  width: 36px;
+  height: 2px;
+  background: currentColor;
+}
+.lp-cream .lp-label,
+.lp-sand .lp-label {
+  color: var(--royal);
+}
+.lp-navy .lp-label,
+.lp-blue .lp-label {
+  color: #8adfff;
+}
+
+.lp-sec h2 {
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.lp-head {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #09234426;
+}
+.lp-head-single {
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+.lp-navy .lp-head,
+.lp-blue .lp-head {
+  border-bottom-color: #ffffff26;
+}
+
+.lp-intro {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.lp-cream .lp-intro,
+.lp-sand .lp-intro {
+  color: var(--ink-soft);
+}
+.lp-note {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.lp-note a,
+.lp-intro a {
+  color: var(--royal);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Hero ---------- */
+.lp-hero {
+  padding: 56px 7% 68px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 6%;
+  background-color: var(--navy);
+  background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.lp-breadcrumb {
+  margin-bottom: 22px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.lp-breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.lp-breadcrumb a:hover {
+  color: #fff;
+}
+.lp-breadcrumb span {
+  margin: 0 4px;
+}
+.lp-hero .eyebrow {
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+.lp-hero h1 {
+  font-size: clamp(42px, 5.4vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -3px;
+  font-weight: 700;
+}
+.lp-accent {
+  display: block;
+  color: #79d6ff;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 6px;
+}
+.lp-lead {
+  max-width: 600px;
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.7;
+}
+.lp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+.lp-hero .button-secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 62px;
+}
+.lp-hero .button-primary,
+.lp-hero .button-secondary {
+  font-size: 17px;
+}
+.lp-hero-photo {
+  margin: 0;
+  height: 470px;
+  overflow: hidden;
+  background: #173954;
+  clip-path: polygon(47% 0, 100% 18%, 100% 100%, 0 100%, 0 21%);
+}
+.lp-hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Fakta cepat (biru muda, kontras tinggi) ---------- */
+.lp-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 7%;
+  background: var(--blue);
+  color: var(--navy);
+}
+.lp-facts div {
+  padding: 28px 24px 30px;
+  border-right: 1px solid #09264230;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.lp-facts div:first-child {
+  padding-left: 0;
+}
+.lp-facts div:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+.lp-facts strong {
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+.lp-facts span {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #06304f;
+}
+
+/* ---------- Subjudul & kartu ---------- */
+.lp-subhead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 22px;
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.lp-subhead::before {
+  content: '◆';
+  font-size: 16px;
+  color: var(--royal);
+}
+
+.lp-scope {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.lp-card {
+  padding: 28px 30px 30px;
+  background: #fff;
+  border: 1px solid var(--card-line);
+  border-top: 4px solid var(--royal);
+}
+.lp-card h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+.lp-card p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ---------- Daftar centang / silang ---------- */
+.lp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+.lp-list li {
+  position: relative;
+  padding-left: 38px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.lp-list li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+.lp-list-yes li::before {
+  content: '✓';
+  background: var(--navy);
+  color: #8adfff;
+}
+.lp-list-no li::before {
+  content: '✕';
+  background: #ffd28a;
+  color: #4a2c00;
+}
+.lp-cream .lp-list li {
+  color: var(--ink);
+}
+
+/* ---------- Plumbing & sanitasi (panel navy di atas section krem) ---------- */
+.lp-plumb {
+  grid-column: 1 / -1;
+  padding: 34px 34px 38px;
+  color: var(--text);
+  background-color: var(--navy);
+  background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 32px 32px;
+  border-top: 4px solid var(--blue);
+}
+.lp-plumb-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 24px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #ffffff26;
+}
+.lp-plumb-head h3 {
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+}
+.lp-plumb-head p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.lp-plumb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+.lp-plumb-col h4 {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--blue);
+  font-size: 21px;
+  line-height: 1.25;
+  color: #8adfff;
+}
+.lp-plumb .lp-list li {
+  color: #f7f9ff;
+}
+.lp-plumb .lp-list-yes li::before {
+  background: var(--blue);
+  color: var(--navy);
+}
+
+/* ---------- Tidak termasuk & ketentuan (navy) ---------- */
+.lp-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.lp-panel {
+  padding: 30px 32px 34px;
+  background: #0d3152;
+  border: 1px solid #ffffff22;
+}
+.lp-panel h3 {
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.lp-panel-note {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.lp-panel .lp-list li {
+  color: #f7f9ff;
+}
+.lp-terms {
+  display: grid;
+  gap: 0;
+  margin: 18px 0 0;
+}
+.lp-terms div {
+  padding: 18px 0;
+  border-top: 1px solid #ffffff22;
+}
+.lp-terms div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.lp-terms div:last-child {
+  padding-bottom: 0;
+}
+.lp-terms dt {
+  margin-bottom: 6px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #8adfff;
+}
+.lp-terms dd {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ---------- Biaya & waktu ---------- */
+.lp-cost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.lp-cost h2 {
+  margin-bottom: 18px;
+}
+.lp-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid var(--card-line);
+  border-top: 4px solid var(--royal);
+}
+.lp-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+}
+.lp-table caption {
+  padding: 22px 26px 6px;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.lp-table th,
+.lp-table td {
+  padding: 20px 26px;
+  text-align: left;
+  border-bottom: 1px solid var(--card-line);
+}
+.lp-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.lp-table th {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--royal);
+  font-weight: 700;
+}
+.lp-table td {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.lp-table td:nth-child(2) {
+  color: var(--royal);
+}
+
+/* ---------- Alur kerja ---------- */
+.lp-steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.lp-steps li {
+  counter-increment: step;
+  padding: 24px 22px 28px;
+  background: #0b4a7a;
+  border: 1px solid #ffffff2a;
+  border-top: 4px solid var(--blue);
+}
+.lp-steps li::before {
+  content: '0' counter(step);
+  display: block;
+  margin-bottom: 14px;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #8adfff;
+}
+.lp-steps h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.lp-steps p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #e3ecf6;
+}
+
+/* ---------- Pembayaran, garansi, area, legalitas ---------- */
+.lp-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.lp-info .lp-card {
+  padding: 26px 26px 28px;
+}
+.lp-info .lp-card h3 {
+  margin-bottom: 12px;
+}
+.lp-info .lp-card p {
+  font-size: 17px;
+}
+
+/* ---------- FAQ (dua kolom) ---------- */
+.lp-faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+  align-items: start;
+}
+.lp-faq-item {
+  border-bottom: 1px solid #ffffff26;
+}
+.lp-faq-col .lp-faq-item:first-child {
+  border-top: 1px solid #ffffff26;
+}
+.lp-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 44px 22px 0;
+  position: relative;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.lp-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.lp-faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--blue);
+}
+.lp-faq-item[open] summary::after {
+  content: '–';
+}
+.lp-faq-item p {
+  padding: 0 40px 24px 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* ---------- Layanan lain ---------- */
+.lp-other {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  gap: 40px;
+  align-items: center;
+}
+.lp-other-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.lp-other-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 24px 26px;
+  background: #fff;
+  border: 1px solid var(--card-line);
+  border-top: 4px solid var(--royal);
+  text-decoration: none;
+  color: var(--ink);
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.lp-other-card strong {
+  font-size: 22px;
+  letter-spacing: -0.4px;
+}
+.lp-other-card span {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.lp-other-card:hover {
+  transform: translateY(-3px);
+  border-top-color: var(--blue);
+}
+
+/* ---------- CTA ---------- */
+.lp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 7%;
+  background: var(--blue);
+  color: var(--navy);
+}
+.lp-cta h2 {
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+.lp-cta p {
+  margin-top: 14px;
+  max-width: 560px;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #06304f;
+}
+.lp-cta .button-primary {
+  flex-shrink: 0;
+  background: var(--navy);
+  color: #fff;
+  font-size: 18px;
+}
+.lp-cta .button-primary:hover {
+  background: #0d3152;
+}
+.lp-cta .button-arrow {
+  background: var(--blue);
+  color: var(--navy);
+}
+
+/* ---------- Aksesibilitas ---------- */
+.lp-faq-item summary:focus-visible,
+.lp-other-card:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+.lp-cta .button-primary:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-other-card {
+    transition: none;
+  }
+  .lp-other-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 1100px) {
+  .lp-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lp-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lp-other {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .lp-hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .lp-hero-photo {
+    height: 340px;
+  }
+  .lp-head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  .lp-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lp-facts div:nth-child(2) {
+    border-right: 0;
+    padding-right: 0;
+  }
+  .lp-facts div:nth-child(-n + 2) {
+    border-bottom: 1px solid #09264230;
+  }
+  .lp-facts div:nth-child(3) {
+    padding-left: 0;
+  }
+  .lp-facts div:nth-child(2n + 1) {
+    padding-left: 0;
+  }
+  .lp-facts div:nth-child(2n) {
+    padding-left: 24px;
+  }
+  .lp-plumb-head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .lp-plumb-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lp-split,
+  .lp-cost,
+  .lp-faq {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lp-faq {
+    gap: 0;
+  }
+  .lp-faq-col + .lp-faq-col .lp-faq-item:first-child {
+    border-top: 0;
+  }
+}
+@media (max-width: 760px) {
+  .lp-sec,
+  .lp-sec-tight {
+    padding: 48px 6% 54px;
+  }
+  .lp-hero {
+    padding: 40px 6% 52px;
+  }
+  .lp-lead,
+  .lp-intro {
+    font-size: 18px;
+  }
+  .lp-scope,
+  .lp-other-grid {
+    grid-template-columns: 1fr;
+  }
+  .lp-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lp-card,
+  .lp-panel {
+    padding: 24px 22px 26px;
+  }
+  .lp-plumb {
+    padding: 26px 22px 30px;
+  }
+  .lp-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 6%;
+  }
+  .lp-table td {
+    font-size: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .lp-facts {
+    padding: 0 6%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .lp-facts div,
+  .lp-facts div:nth-child(2n),
+  .lp-facts div:nth-child(2n + 1) {
+    padding: 20px 14px 22px 0;
+  }
+  .lp-facts div:nth-child(2n) {
+    padding-left: 16px;
+    padding-right: 0;
+  }
+  .lp-facts strong {
+    font-size: 21px;
+  }
+  .lp-facts span {
+    font-size: 15px;
+  }
+  .lp-steps,
+  .lp-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Tambahan: ikon, diagram jalur air, kartu sorot ---------- */
+.lp-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.lp-card-head h3 {
+  margin: 0;
+}
+.lp-ico {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: #8adfff;
+}
+.lp-ico svg {
+  width: 24px;
+  height: 24px;
+}
+.lp-ico-lg {
+  width: 56px;
+  height: 56px;
+  background: var(--blue);
+  color: var(--navy);
+}
+.lp-ico-lg svg {
+  width: 30px;
+  height: 30px;
+}
+.lp-plumb-title {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lp-flow {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0 0 28px;
+  display: grid;
+  gap: 12px;
+  border-bottom: 1px solid #ffffff26;
+}
+.lp-flow li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+}
+.lp-flow-tag {
+  width: 170px;
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.lp-flow i {
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff99;
+}
+.lp-chip {
+  padding: 9px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  border: 1px solid;
+  border-radius: 50px;
+}
+.lp-flow-clean .lp-flow-tag {
+  color: #8adfff;
+}
+.lp-flow-clean .lp-chip {
+  background: #35c3f41f;
+  border-color: #35c3f4;
+  color: #fff;
+}
+.lp-flow-waste .lp-flow-tag {
+  color: #ffd28a;
+}
+.lp-flow-waste .lp-chip {
+  background: #ffd28a1f;
+  border-color: #ffd28a;
+  color: #fff;
+}
+.lp-flow-rain .lp-flow-tag {
+  color: #d0dbea;
+}
+.lp-flow-rain .lp-chip {
+  background: #ffffff14;
+  border-color: #d0dbea;
+  color: #fff;
+}
+
+.lp-card-hl {
+  background: var(--navy);
+  border-color: var(--navy);
+  border-top-color: var(--blue);
+}
+.lp-card-hl h3 {
+  color: #8adfff;
+}
+.lp-card-hl p {
+  color: #f7f9ff;
+}
+
+.lp-split {
+  align-items: stretch;
+}
+.lp-panel {
+  display: flex;
+  flex-direction: column;
+}
+.lp-panel-foot {
+  margin-top: auto;
+  padding-top: 22px;
+}
+.lp-panel-foot p {
+  margin-bottom: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff22;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.lp-panel-foot a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8adfff;
+  text-underline-offset: 4px;
+}
+.lp-panel .lp-list {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 760px) {
+  .lp-flow-tag {
+    width: 100%;
+  }
+  .lp-chip {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lp-plumb-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .lp-flow {
+    display: none;
+  }
+  .lp-plumb-head {
+    margin-bottom: 22px;
+  }
+}
+
+/* ---------- Foto hasil pekerjaan sanitari ---------- */
+.lp-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.lp-photos figure {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #0d3152;
+  border-bottom: 3px solid var(--blue);
+}
+.lp-photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+.lp-photos figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 44px 18px 16px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  background: linear-gradient(to top, rgba(6, 29, 51, 0.92), rgba(6, 29, 51, 0));
+}
+
+@media (max-width: 760px) {
+  .lp-photos {
+    display: flex;
+    gap: 12px;
+    margin-right: -22px;
+    padding-right: 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .lp-photos figure {
+    flex: 0 0 74%;
+    scroll-snap-align: start;
+  }
+}

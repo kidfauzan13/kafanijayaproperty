@@ -40,7 +40,7 @@ navMenu.querySelectorAll('a').forEach((link) => {
 
 // Reset menu ketika kembali ke desktop
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 760) {
+  if (window.innerWidth > 980) {
     closeMenu();
   }
 });
@@ -149,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const estimateWhatsApp = document.getElementById('estimateWhatsApp');
 
   const PRICE_PER_M2 = 4500000;
-  const WHATSAPP_NUMBER = '6289687623476';
 
   if (!slider || !areaValue || !estimateTotal || !estimateDescription || !estimateWhatsApp) {
     return;
@@ -211,9 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const lokasi = document.getElementById('contactLocation').value.trim();
     const kebutuhan = document.getElementById('contactMessage').value.trim();
 
-    // Nomor WhatsApp tujuan: 0896-8762-3476
-    const nomorBisnis = '6289678763476';
-
     const pesan = [
       'Halo Kafani Jaya Property, saya ingin konsultasi.',
       '',
@@ -227,9 +223,10 @@ document.addEventListener('DOMContentLoaded', function () {
       'Mohon informasi lebih lanjut. Terima kasih.',
     ].join('\n');
 
-    const url = 'https://wa.me/6289687623476/' + nomorBisnis + '?text=' + encodeURIComponent(pesan);
+    // Memakai konstanta WHATSAPP_NUMBER di atas (0896-8762-3476)
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(pesan)}`;
 
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener');
   });
 });
 

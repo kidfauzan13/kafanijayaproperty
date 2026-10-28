@@ -1,0 +1,34 @@
+# Simpan sebagai ".htaccess" di root (public_html). BACKUP .htaccess lama dulu bila sudah ada.
+
+# --- Redirect URL lama ke URL baru ---
+Redirect 301 /jasa-bangun-rumah-jakarta-selatan/ /jasa-bangun-rumah-jabodetabek/
+
+# --- Halaman 404 kustom ---
+ErrorDocument 404 /404.html
+
+# --- Paksa HTTPS + satu versi domain (tanpa www), sesuai canonical ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://kafanijayaproperty.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Kompresi ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/xml application/xml
+</IfModule>
+
+# --- Cache browser ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

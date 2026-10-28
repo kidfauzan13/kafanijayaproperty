@@ -2949,3 +2949,82 @@ a {
   object-position: center 35%;
   transform: scale(0.95);
 }
+
+/* H1 SEO: lokasi layanan sebagai baris kecil di bawah slogan */
+.headline-location {
+  display: block;
+  margin-top: 22px;
+  font-size: clamp(13px, 1.25vw, 18px);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+@media (max-width: 760px) {
+  .headline-location {
+    margin-top: 16px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Link detail layanan di intro section Layanan */
+.services-intro a {
+  color: #79d6ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Navbar: 7 menu muat di layar desktop sempit */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+}
+
+/* NAVBAR TABLET: pakai menu hamburger sampai 980px supaya tombol Konsultasi tidak terpotong */
+@media (min-width: 761px) and (max-width: 980px) {
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .nav-cta {
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 12px 4% 20px;
+    background: var(--navy-deep);
+    background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+    background-size: 32px 32px;
+    border-top: 1px solid #ffffff20;
+    box-shadow: 0 12px 20px #0003;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 14px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #ffffff16;
+  }
+}
