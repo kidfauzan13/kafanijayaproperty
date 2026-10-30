@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
 :root {
   --navy: #092642;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', Arial, sans-serif;
+  font-family: "DM Sans", Arial, sans-serif;
   color: var(--text);
   background: var(--navy);
 }
@@ -42,7 +42,9 @@ a {
   top: 0;
   z-index: 1000;
   background-color: var(--navy-deep);
-  background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
   background-size: 32px 32px;
   border-bottom: 1px solid #ffffff16;
 }
@@ -143,7 +145,9 @@ a {
   align-items: center;
   gap: 7%;
   background-color: var(--navy);
-  background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -474,7 +478,9 @@ a {
     right: 0;
     padding: 12px 6% 20px;
     background: var(--navy-deep);
-    background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+    background-image:
+      linear-gradient(#ffffff0b 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
     background-size: 32px 32px;
     border-top: 1px solid #ffffff20;
     box-shadow: 0 12px 20px #0003;
@@ -1120,7 +1126,9 @@ a {
   color: #f8f9fc;
 
   /* Grid tipis seperti referensi */
-  background-image: linear-gradient(rgba(133, 185, 220, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(133, 185, 220, 0.09) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(133, 185, 220, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(133, 185, 220, 0.09) 1px, transparent 1px);
 
   background-size: 40px 40px;
 }
@@ -1505,11 +1513,16 @@ a {
 }
 
 .portfolio-card::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(to top, rgba(3, 21, 37, 0.88) 0%, rgba(3, 21, 37, 0.25) 42%, rgba(3, 21, 37, 0.02) 75%);
+  background: linear-gradient(
+    to top,
+    rgba(3, 21, 37, 0.88) 0%,
+    rgba(3, 21, 37, 0.25) 42%,
+    rgba(3, 21, 37, 0.02) 75%
+  );
   pointer-events: none;
 }
 
@@ -1782,7 +1795,9 @@ a {
   color: #092344;
   background-color: #eae7df;
 
-  background-image: linear-gradient(rgba(9, 35, 68, 0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 35, 68, 0.075) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(9, 35, 68, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(9, 35, 68, 0.075) 1px, transparent 1px);
 
   background-size: 90px 90px;
 }
@@ -2018,7 +2033,9 @@ a {
   color: #fff;
   background-color: #06446e;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
 
   background-size: 81px 81px;
 }
@@ -2114,7 +2131,10 @@ a {
   padding: 80px 3.6%;
   color: #f7faff;
   background-color: #073c65;
-  background-image: linear-gradient(rgba(105, 190, 235, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 190, 235, 0.08) 1px, transparent 1px), linear-gradient(120deg, #084879, #073452);
+  background-image:
+    linear-gradient(rgba(105, 190, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105, 190, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(120deg, #084879, #073452);
   background-size:
     38px 38px,
     38px 38px,
@@ -3009,7 +3029,9 @@ a {
     right: 0;
     padding: 12px 4% 20px;
     background: var(--navy-deep);
-    background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+    background-image:
+      linear-gradient(#ffffff0b 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
     background-size: 32px 32px;
     border-top: 1px solid #ffffff20;
     box-shadow: 0 12px 20px #0003;
@@ -3026,5 +3048,116 @@ a {
     padding: 14px 0;
     font-size: 16px;
     border-bottom: 1px solid #ffffff16;
+  }
+}
+/* ===== DROPDOWN LAYANAN ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #e5edf7;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown.open .nav-dropdown-toggle {
+  color: var(--blue);
+}
+
+.nav-caret {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.nav-dropdown.open .nav-caret {
+  transform: rotate(180deg);
+}
+
+/* Desktop: panel melayang di bawah tombol */
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: -16px;
+  min-width: 220px;
+  padding: 8px;
+  background: var(--navy-deep);
+  border: 1px solid #ffffff20;
+  border-radius: 12px;
+  box-shadow: 0 16px 30px #0004;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-dropdown-menu a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #ffffff10;
+}
+
+/* Samakan ukuran huruf dengan menu lain di layar desktop sempit */
+@media (max-width: 1100px) {
+  .nav-dropdown-toggle {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .nav-dropdown-toggle {
+    font-size: 15px;
+  }
+}
+
+/* HP & tablet (hamburger): dropdown jadi daftar yang melebar ke bawah */
+@media (max-width: 980px) {
+  .nav-dropdown {
+    border-bottom: 1px solid #ffffff16;
+  }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    min-width: 0;
+    padding: 0 0 8px 14px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-dropdown-menu a {
+    padding: 11px 0;
+    border-bottom: 0;
+    border-radius: 0;
+    font-size: 15px;
+    color: #c4d4e6;
+  }
+
+  .nav-dropdown-menu a:hover {
+    background: none;
   }
 }
